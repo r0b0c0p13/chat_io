@@ -1,11 +1,10 @@
 var express = require("express");
 var socket = require("socket.io");
+var http = require("http");
 
 var app = express();
 
-var server = app.listen(3000,function(){
-    console.log("Server started at 3000");
-});
+var server = http.createServer(app);
 //static
 app.use(express.static('public'));
 
@@ -22,4 +21,8 @@ io.on("connection",function(socket){
          socket.broadcast.emit('typing',data);
    });
 
+});
+
+server.listen(3000,function(){
+     console.log("server started");
 });
