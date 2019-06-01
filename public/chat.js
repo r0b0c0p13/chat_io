@@ -1,6 +1,6 @@
 //connection
 
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://cchhaatt-mmee.herokuapp.com');
 
 
 //query
