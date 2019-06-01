@@ -7,6 +7,7 @@ var app = express();
 var server = http.createServer(app);
 //static
 app.use(express.static('public'));
+var port = process.env.PORT || 3000;
 
 //socket 
 var io = socket(server);
@@ -23,6 +24,6 @@ io.on("connection",function(socket){
 
 });
 
-server.listen(3000,function(){
+server.listen(port,function(){
      console.log("server started");
 });
