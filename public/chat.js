@@ -1,6 +1,6 @@
 //connection
 
-var socket = io.connect('https://cchhaatt-mmee.herokuapp.com');
+var socket = io();
 
 
 //query
